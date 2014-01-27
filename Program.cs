@@ -18,7 +18,7 @@ namespace AlephClipboard
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             bool createdNew;
-            m_Mutex = new Mutex(true, "MyApplicationMutex", out createdNew);
+            m_Mutex = new Mutex(true, "AlephClipboardMutex", out createdNew);
             if (createdNew)
             {
                 Form f = new AlephClipboard();

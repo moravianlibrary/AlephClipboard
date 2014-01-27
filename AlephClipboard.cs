@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace AlephClipboard
 {
@@ -52,8 +53,9 @@ namespace AlephClipboard
             trayIcon.Text = "ALEPH Clipboard";
             this.Text = trayIcon.Text;
             trayIcon.MouseClick += TrayIcon_Click;
-            // TODO add nice icons
-            trayIcon.Icon = new Icon(SystemIcons.Shield, 40, 40);
+            // nice icons
+            Stream icon = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("AlephClipboard.favicon.ico");
+            trayIcon.Icon = new Icon(icon);
             this.Icon = trayIcon.Icon;
 
             // Add menu to tray icon and show it.
