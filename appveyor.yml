@@ -8,5 +8,5 @@ artifacts:
 deploy:
 - provider: GitHub
   auth_token:
-    secure: 5VjZUEJ73QP/k5XNrO47LiS0LURjEZpbs8VVGtML69cqSq6yBTqoPB4T1hoi416/
+    secure: p2fb5iahwUpzeg6hxOFW8ijRUs14PoLXPL7tBNhfpjIgcio4MhKRhJHUGNitQZg0 
   artifact: bin\Release\ALEPHClipboard.exe
