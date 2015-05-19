@@ -1,0 +1,12 @@
+version: 1.0.{build}
+configuration: Release
+build:
+  project: ALEPH Clipboard.sln
+  verbosity: minimal
+artifacts:
+- path: bin\Release\ALEPHClipboard.exe
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: 5VjZUEJ73QP/k5XNrO47LiS0LURjEZpbs8VVGtML69cqSq6yBTqoPB4T1hoi416/
+  artifact: bin\Release\ALEPHClipboard.exe
